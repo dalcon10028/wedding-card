@@ -33,7 +33,7 @@ Make sure to install dependencies:
 
 ```bash
 # pnpm
-pnpm installq
+pnpm install
 ```
 
 ## Development Server
@@ -51,12 +51,6 @@ Build the application for production:
 ```bash
 # pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
