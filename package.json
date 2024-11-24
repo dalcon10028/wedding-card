@@ -2,6 +2,10 @@
   "name": "wedding-card",
   "private": false,
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
