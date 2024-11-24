@@ -10,7 +10,16 @@ export default defineNuxtConfig({
   ],
   css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css', 'primeicons/primeicons.css'],
   primevue: {
-    options: { theme: 'none' }
+    options: { theme: 'none' },
+    pt: {
+      dialog: {
+        root: { 
+          style: {
+            display: 'block',
+          }
+        },
+      }
+    }
   },
   postcss: {
     plugins: {

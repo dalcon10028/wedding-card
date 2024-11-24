@@ -25,6 +25,8 @@
         </div>
       </div>
     </main>
+    
+    
     <fade-in-section name="Invitation" title="소중한 분들을 초대합니다" class="h-screen px-8">
       <div class="text-center my-8 flex flex-col gap-5">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
@@ -44,18 +46,46 @@
         </div>
       </div>
       <div class="text-center">
-        <Button label="연락하기" icon="pi pi-phone" />
+        <drawer-button name="contact" title="연락하기">
+          <div class="w-96 mx-auto mt-12">
+            <div class="mb-10 mx-4 text-sm">
+              <div class="text-start text-[#ccc]">신랑측 <span class="uppercase text-xs tracking-widest text-[#999]">groom</span></div>
+              <Divider type="dotted"/>
+              <div class="grid grid-cols-3 gap-2.5 my-5 text-white leading-10">
+                <div class="text-start text-[#ccc]">신랑</div>
+                <div>이연권</div>
+                <div>
+                  <Button href="tel:0100000000" as="a" icon="pi pi-phone" class="p-button-rounded p-button-text p-button-sm" />
+                  <Button href="sms:01000000000" as="a" icon="pi pi-envelope" class="p-button-rounded p-button-text p-button-sm" />
+                </div>
+                
+                <div class="text-start text-[#ccc]">신랑 아버지</div>
+                <div>이연권</div>
+                <div>
+                  <Button href="tel:0100000000" as="a" icon="pi pi-phone" class="p-button-rounded p-button-text p-button-sm" />
+                  <Button href="sms:01000000000" as="a" icon="pi pi-envelope" class="p-button-rounded p-button-text p-button-sm" />
+                </div>
+                
+                <div class="text-start text-[#ccc]">신랑 어머니</div>
+                <div>이연권</div>
+                <div>
+                  <Button href="tel:0100000000" as="a" icon="pi pi-phone" class="p-button-rounded p-button-text p-button-sm" />
+                  <Button href="sms:01000000000" as="a" icon="pi pi-envelope" class="p-button-rounded p-button-text p-button-sm" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </drawer-button>
       </div>
     </fade-in-section>
     
     <section>
-      <h1>GALLERY</h1>
-
-      <p>more...</p>
     </section>
 
     <section>
-      <h1>calander</h1>
+      <h1>GALLERY</h1>
+
+      <p>more...</p>
     </section>
 
     <section>
