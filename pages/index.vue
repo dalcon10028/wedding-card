@@ -79,7 +79,23 @@
       </div>
     </fade-in-section>
     
-    <section>
+    <section class="px-8">
+      <h2>2025.3.29</h2>
+      <p>토요일 오후 4시 50분</p>
+      <DatePicker 
+        inline
+        :readonly="true"
+        :showOtherMonths="false"
+        :modelValue="new Date('2025-3-29')"
+        :defaultValue="new Date('2025-3-29')"
+        class="w-full p-8" 
+        pt:panel:class="bg-transparent border-t-1 border-b-1 border-r-0 border-l-0"
+        pt:header:class="hidden"
+        @click.stop
+      />
+      <p class="text-base">
+        연권, 하얀의 결혼식이 34일 지났습니다.
+      </p>
     </section>
 
     <section>

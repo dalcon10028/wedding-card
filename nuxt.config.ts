@@ -19,7 +19,7 @@ export default defineNuxtConfig({
           }
         },
       }
-    }
+    },
   },
   postcss: {
     plugins: {
