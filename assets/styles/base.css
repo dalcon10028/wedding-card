@@ -53,7 +53,7 @@
 * should be;
 * :root[class="app-dark"] {
 */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
       --p-primary-color: var(--p-primary-400);
       --p-primary-contrast-color: var(--p-surface-900);
@@ -71,4 +71,4 @@
       --p-text-muted-color: var(--p-surface-400);
       --p-text-hover-muted-color: var(--p-surface-300);
   }
-}
+} */
