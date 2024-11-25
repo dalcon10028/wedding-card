@@ -98,6 +98,69 @@
       </p>
     </section>
 
+    <fade-in-section name="Location" title="오시는 길" class="h-screen">
+      <div class="mt-4 px-8">
+        <div class="text-2xl">웨딩스퀘어 강변 3F, 무슨무슨홀</div>
+        <div class="text-xl">서울 광진구 광나루로56길 85</div>
+      </div>
+      <div class="my-7 h-64">
+        <Map />
+      </div>
+      <div class="text-start px-8">
+        <div>
+          <div class="text-base mb-3">네비게이션</div>
+          <div class="text-base">원하시는 앱을 선택하시면 길안내가 시작됩니다.</div>
+          <div class="flex gap-2 justify-center mt-3">
+            <Button label="Profile" icon="pi pi-user" variant="outlined">
+              <Avatar image="/logo/kakao-navi.webp" class="w-4 h-4" />
+              카카오내비
+            </Button>
+            <Button label="Profile" icon="pi pi-user" variant="outlined">
+              <Avatar image="/logo/tmap.webp" class="w-4 h-4" />
+              <span class="text-base">티맵</span>
+            </Button>
+            <Button label="Profile" icon="pi pi-user" variant="outlined">
+              <Avatar image="/logo/naver-map.webp" class="w-4 h-4" />
+              네이버맵
+            </Button>
+          </div>
+        </div>
+        <Divider />
+        <div>
+          <div class="text-base mb-3">지하철</div>
+          <div>
+            <p>
+              <span class="text-[#0d347f]">●</span> 1호선,
+              <span class="text-[#0d347f]">●</span> 2호선 강변역 3번 출구
+            </p>
+            <p>&nbsp;&nbsp;· 테크노마트판매동 지하1층과 연결</p>
+          </div>
+        </div>
+        <Divider />
+        <div>
+          <div class="text-base mb-3">버스</div>
+          <div>
+            <p>
+              <span class="text-[#0d347f]">●</span> 1호선,
+              <span class="text-[#0d347f]">●</span> 2호선 강변역 3번 출구
+            </p>
+            <p>&nbsp;&nbsp;· 테크노마트판매동 지하1층과 연결</p>
+          </div>
+        </div>
+        <Divider />
+        <div>
+          <div class="text-base mb-3">자가용</div>
+          <div>
+            <p>
+              <span class="text-[#0d347f]">●</span> 1호선,
+              <span class="text-[#0d347f]">●</span> 2호선 강변역 3번 출구
+            </p>
+            <p>&nbsp;&nbsp;· 테크노마트판매동 지하1층과 연결</p>
+          </div>
+        </div>
+      </div>
+    </fade-in-section>
+
     <section>
       <h1>GALLERY</h1>
 
