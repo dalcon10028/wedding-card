@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@primevue/nuxt-module',
     '@vueuse/nuxt',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxt/eslint'
   ],
   css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css', 'primeicons/primeicons.css'],
   primevue: {
@@ -43,5 +44,10 @@ export default defineNuxtConfig({
         ital: '200..700',
       }
     }
-  }
+  },
+  eslint: {
+    config: {
+      stylistic: true,
+    }
+  },
 })

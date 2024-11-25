@@ -161,22 +161,9 @@
       </div>
     </fade-in-section>
 
-    <section>
-      <h1>GALLERY</h1>
-
-      <p>more...</p>
-    </section>
-
-    <section>
-      <h1>location</h1>
-      <h3>map</h3>
-      <h3>약도 이미지 보기</h3>
-      <h3>네비게이션</h3>
-      <h3>지하철</h3>
-      <h3>버스</h3>
-      <h3>자가용</h3>
-      <h3>주차장 안내</h3>
-    </section>
+    <fade-in-section name="gallery" title="우리의 순간">
+      <Gallery />
+    </fade-in-section>
 
     <section>
       <h1>Information</h1>

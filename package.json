@@ -9,6 +9,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -24,14 +26,17 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^0.7.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@primevue/nuxt-module": "^4.2.3",
     "@tailwindcss/typography": "^0.5.15",
     "@vueuse/core": "^11.3.0",
     "@vueuse/nuxt": "^11.3.0",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.15.0",
     "postcss": "^8.4.49",
     "postcss-import": "^16.1.0",
-    "sass": "^1.81.0"
+    "sass": "^1.81.0",
+    "typescript": "^5.7.2"
   }
 }

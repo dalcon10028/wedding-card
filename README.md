@@ -13,6 +13,9 @@ Wedding Card
 ![supabase](https://img.shields.io/badge/supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
 
+zod
+pnpm
+
 ---
 
 
