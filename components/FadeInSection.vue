@@ -1,35 +1,42 @@
 <script lang="ts" setup>
-import { useIntersectionObserver } from "@vueuse/core";
-import { defineProps } from "vue";
+import { useIntersectionObserver } from '@vueuse/core'
+import { defineProps } from 'vue'
 
-const { 
-  name, 
+const {
+  name,
   title,
-  threshold = 0.2
+  threshold = 0.2,
 } = defineProps<{
-  name: string;
-  title: string;
-  threshold?: number;
-}>();
+  name: string
+  title: string
+  threshold?: number
+}>()
 
-const target = ref<HTMLElement | null>(null);
-const targetIsVisible = ref(false);
+const target = ref<HTMLElement | null>(null)
+const targetIsVisible = ref(false)
 
 const { stop } = useIntersectionObserver(
   target,
   ([entry], observerElement) => {
     targetIsVisible.value = entry?.isIntersecting || false
-  },{ threshold }
-);
+  }, { threshold },
+)
 </script>
 
 <template>
-  <section ref="target" class="flex flex-col py-10">
+  <section
+    ref="target"
+    class="flex flex-col py-10"
+  >
     <transition name="fade">
       <div v-show="targetIsVisible">
         <div class="text-center">
-          <div class="uppercase text-lg">{{ name }}</div>
-          <div class="text-2xl">{{ title }}</div>
+          <div class="uppercase text-lg">
+            {{ name }}
+          </div>
+          <div class="text-2xl">
+            {{ title }}
+          </div>
         </div>
         <slot />
       </div>

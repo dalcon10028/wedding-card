@@ -1,20 +1,28 @@
 <script lang="ts" setup>
 
 </script>
+
 <template>
   <div class="flex flex-col text-center">
-    <main class="min-h-screen flex flex-col">
-      <div class="w-full text-center p-5">
-        <h2 class="text-3xl font-serif pb-1.5">2025/3/29</h2>
-        <p class="text-base uppercase font-serif">saturday</p>
+    <main class="flex flex-col min-h-screen">
+      <div class="w-full p-5 text-center">
+        <h2 class="text-3xl font-serif pb-1.5">
+          2025/3/29
+        </h2>
+        <p class="font-serif text-base uppercase">
+          saturday
+        </p>
       </div>
       <div class="flex justify-center">
         <picture>
-          <img src="https://picsum.photos/425/585" alt="main">
+          <img
+            src="https://picsum.photos/425/585"
+            alt="main"
+          >
         </picture>
       </div>
-      <div class="flex flex-col text-center font-sans py-8 gap-5">
-        <div class="text-2xl flex gap-2 mx-auto justify-center">
+      <div class="flex flex-col gap-5 py-8 font-sans text-center">
+        <div class="flex justify-center gap-2 mx-auto text-2xl">
           <span>이연권</span>
           <span>·</span>
           <span>유하얀</span>
@@ -25,19 +33,26 @@
         </div>
       </div>
     </main>
-    
-    
-    <fade-in-section name="Invitation" title="소중한 분들을 초대합니다" class="h-screen px-8">
-      <div class="text-center my-8 flex flex-col gap-5">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+
+    <fade-in-section
+      name="Invitation"
+      title="소중한 분들을 초대합니다"
+      class="h-screen px-8"
+    >
+      <div class="flex flex-col gap-5 my-8 text-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>Atque nam cupiditate, laudantium sit vitae praesentium quis</p>
         <p>veritatis ratione reiciendis quam, tempora ab quae et assumenda aliquid, natus repellat.</p>
         <p>Corporis, error.</p>
       </div>
-      <div class="py-8 flex justify-center">
-        <img class="rounded-xl" src="https://picsum.photos/360/240" alt="test">
+      <div class="flex justify-center py-8">
+        <img
+          class="rounded-xl"
+          src="https://picsum.photos/360/240"
+          alt="test"
+        >
       </div>
-      <div class="text-center pb-5">
+      <div class="pb-5 text-center">
         <div>
           <span>김김김·이이이</span>의 장남 <span>이연권</span>
         </div>
@@ -46,31 +61,72 @@
         </div>
       </div>
       <div class="text-center">
-        <drawer-button name="contact" title="연락하기">
-          <div class="w-96 mx-auto mt-12">
-            <div class="mb-10 mx-4 text-sm">
-              <div class="text-start text-[#ccc]">신랑측 <span class="uppercase text-xs tracking-widest text-[#999]">groom</span></div>
-              <Divider type="dotted"/>
+        <drawer-button
+          name="contact"
+          title="연락하기"
+        >
+          <div class="mx-auto mt-12 w-96">
+            <div class="mx-4 mb-10 text-sm">
+              <div class="text-start text-[#ccc]">
+                신랑측 <span class="uppercase text-xs tracking-widest text-[#999]">groom</span>
+              </div>
+              <Divider type="dotted" />
               <div class="grid grid-cols-3 gap-2.5 my-5 text-white leading-10">
-                <div class="text-start text-[#ccc]">신랑</div>
-                <div>이연권</div>
-                <div>
-                  <Button href="tel:0100000000" as="a" icon="pi pi-phone" class="p-button-rounded p-button-text p-button-sm" />
-                  <Button href="sms:01000000000" as="a" icon="pi pi-envelope" class="p-button-rounded p-button-text p-button-sm" />
+                <div class="text-start text-[#ccc]">
+                  신랑
                 </div>
-                
-                <div class="text-start text-[#ccc]">신랑 아버지</div>
                 <div>이연권</div>
                 <div>
-                  <Button href="tel:0100000000" as="a" icon="pi pi-phone" class="p-button-rounded p-button-text p-button-sm" />
-                  <Button href="sms:01000000000" as="a" icon="pi pi-envelope" class="p-button-rounded p-button-text p-button-sm" />
+                  <Button
+                    href="tel:0100000000"
+                    as="a"
+                    icon="pi pi-phone"
+                    class="p-button-rounded p-button-text p-button-sm"
+                  />
+                  <Button
+                    href="sms:01000000000"
+                    as="a"
+                    icon="pi pi-envelope"
+                    class="p-button-rounded p-button-text p-button-sm"
+                  />
                 </div>
-                
-                <div class="text-start text-[#ccc]">신랑 어머니</div>
+
+                <div class="text-start text-[#ccc]">
+                  신랑 아버지
+                </div>
                 <div>이연권</div>
                 <div>
-                  <Button href="tel:0100000000" as="a" icon="pi pi-phone" class="p-button-rounded p-button-text p-button-sm" />
-                  <Button href="sms:01000000000" as="a" icon="pi pi-envelope" class="p-button-rounded p-button-text p-button-sm" />
+                  <Button
+                    href="tel:0100000000"
+                    as="a"
+                    icon="pi pi-phone"
+                    class="p-button-rounded p-button-text p-button-sm"
+                  />
+                  <Button
+                    href="sms:01000000000"
+                    as="a"
+                    icon="pi pi-envelope"
+                    class="p-button-rounded p-button-text p-button-sm"
+                  />
+                </div>
+
+                <div class="text-start text-[#ccc]">
+                  신랑 어머니
+                </div>
+                <div>이연권</div>
+                <div>
+                  <Button
+                    href="tel:0100000000"
+                    as="a"
+                    icon="pi pi-phone"
+                    class="p-button-rounded p-button-text p-button-sm"
+                  />
+                  <Button
+                    href="sms:01000000000"
+                    as="a"
+                    icon="pi pi-envelope"
+                    class="p-button-rounded p-button-text p-button-sm"
+                  />
                 </div>
               </div>
             </div>
@@ -78,18 +134,18 @@
         </drawer-button>
       </div>
     </fade-in-section>
-    
+
     <section class="px-8">
       <h2>2025.3.29</h2>
       <p>토요일 오후 4시 50분</p>
-      <DatePicker 
+      <DatePicker
         inline
         :readonly="true"
-        :showOtherMonths="false"
-        :modelValue="new Date('2025-3-29')"
-        :defaultValue="new Date('2025-3-29')"
-        class="w-full p-8" 
-        pt:panel:class="bg-transparent border-t-1 border-b-1 border-r-0 border-l-0"
+        :show-other-months="false"
+        :model-value="new Date('2025-3-29')"
+        :default-value="new Date('2025-3-29')"
+        class="w-full p-8"
+        pt:panel:class="bg-transparent border-l-0 border-r-0 border-t-1 border-b-1"
         pt:header:class="hidden"
         @click.stop
       />
@@ -98,36 +154,71 @@
       </p>
     </section>
 
-    <fade-in-section name="Location" title="오시는 길" class="h-screen">
-      <div class="mt-4 px-8">
-        <div class="text-2xl">웨딩스퀘어 강변 3F, 무슨무슨홀</div>
-        <div class="text-xl">서울 광진구 광나루로56길 85</div>
+    <fade-in-section
+      name="Location"
+      title="오시는 길"
+      class="h-screen"
+    >
+      <div class="px-8 mt-4">
+        <div class="text-2xl">
+          웨딩스퀘어 강변 3F, 무슨무슨홀
+        </div>
+        <div class="text-xl">
+          서울 광진구 광나루로56길 85
+        </div>
       </div>
-      <div class="my-7 h-64">
+      <div class="h-64 my-7">
         <Map />
       </div>
-      <div class="text-start px-8">
+      <div class="px-8 text-start">
         <div>
-          <div class="text-base mb-3">네비게이션</div>
-          <div class="text-base">원하시는 앱을 선택하시면 길안내가 시작됩니다.</div>
-          <div class="flex gap-2 justify-center mt-3">
-            <Button label="Profile" icon="pi pi-user" variant="outlined">
-              <Avatar image="/logo/kakao-navi.webp" class="w-4 h-4" />
+          <div class="mb-3 text-base">
+            네비게이션
+          </div>
+          <div class="text-base">
+            원하시는 앱을 선택하시면 길안내가 시작됩니다.
+          </div>
+          <div class="flex justify-center gap-2 mt-3">
+            <Button
+              label="Profile"
+              icon="pi pi-user"
+              variant="outlined"
+            >
+              <Avatar
+                image="/logo/kakao-navi.webp"
+                class="w-4 h-4"
+              />
               카카오내비
             </Button>
-            <Button label="Profile" icon="pi pi-user" variant="outlined">
-              <Avatar image="/logo/tmap.webp" class="w-4 h-4" />
+            <Button
+              label="Profile"
+              icon="pi pi-user"
+              variant="outlined"
+            >
+              <Avatar
+                image="/logo/tmap.webp"
+                class="w-4 h-4"
+              />
               <span class="text-base">티맵</span>
             </Button>
-            <Button label="Profile" icon="pi pi-user" variant="outlined">
-              <Avatar image="/logo/naver-map.webp" class="w-4 h-4" />
+            <Button
+              label="Profile"
+              icon="pi pi-user"
+              variant="outlined"
+            >
+              <Avatar
+                image="/logo/naver-map.webp"
+                class="w-4 h-4"
+              />
               네이버맵
             </Button>
           </div>
         </div>
         <Divider />
         <div>
-          <div class="text-base mb-3">지하철</div>
+          <div class="mb-3 text-base">
+            지하철
+          </div>
           <div>
             <p>
               <span class="text-[#0d347f]">●</span> 1호선,
@@ -138,7 +229,9 @@
         </div>
         <Divider />
         <div>
-          <div class="text-base mb-3">버스</div>
+          <div class="mb-3 text-base">
+            버스
+          </div>
           <div>
             <p>
               <span class="text-[#0d347f]">●</span> 1호선,
@@ -149,7 +242,9 @@
         </div>
         <Divider />
         <div>
-          <div class="text-base mb-3">자가용</div>
+          <div class="mb-3 text-base">
+            자가용
+          </div>
           <div>
             <p>
               <span class="text-[#0d347f]">●</span> 1호선,
@@ -161,27 +256,58 @@
       </div>
     </fade-in-section>
 
-    <fade-in-section name="gallery" title="우리의 순간">
+    <fade-in-section
+      name="gallery"
+      title="우리의 순간"
+    >
       <Gallery />
     </fade-in-section>
 
-    <section>
-      <h1>Information</h1>
-      <h3>피로연 안내</h3>
-      <button>피로연 지도 보기</button>
-    </section>
-
-    <section>
-      <h1>image</h1>
-    </section>
-
-    <section>
-      <h1>guest book</h1>
-    </section>
-
-    <section>
-      <h1>account</h1>
-    </section>
+    <fade-in-section
+      name="account"
+      title="마음 전하실 곳"
+      class="px-8"
+    >
+      <Accordion
+        value="0"
+        class="px-10"
+      >
+        <AccordionPanel value="0">
+          <AccordionHeader>신랑측 계좌번호</AccordionHeader>
+          <AccordionContent>
+            <div class="flex flex-col">
+              <div class="flex justify-between">
+                <span>토스뱅크 110-000-000000</span>
+                <div>복사</div>
+              </div>
+              <div class="flex justify-between">
+                <span>이연권</span>
+                <div class="relative">
+                  <div>pay</div>
+                </div>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionPanel>
+        <AccordionPanel value="1">
+          <AccordionHeader>신부측 계좌번호</AccordionHeader>
+          <AccordionContent>
+            <div class="flex flex-col">
+              <div class="flex justify-between">
+                <span>토스뱅크 110-000-000000</span>
+                <div>복사</div>
+              </div>
+              <div class="flex justify-between">
+                <span>이연권</span>
+                <div class="relative">
+                  <div>pay</div>
+                </div>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionPanel>
+      </Accordion>
+    </fade-in-section>
 
     <footer>
       <h1>footer</h1>
