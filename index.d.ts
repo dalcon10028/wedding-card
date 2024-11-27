@@ -9,3 +9,18 @@ declare global {
     }
   }
 }
+
+declare module 'nuxt/schema' {
+  interface RuntimeConfig {
+    public: {
+      amplitudeApiKey: string
+    }
+  }
+  interface PublicRuntimeConfig {
+    public: {
+      amplitudeApiKey: string
+    }
+  }
+}
+
+export {}

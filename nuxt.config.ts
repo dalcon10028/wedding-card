@@ -9,6 +9,11 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css', 'primeicons/primeicons.css'],
+  runtimeConfig: {
+    public: {
+      amplitudeApiKey: 'bfb5c83035c7a5d0537d1ada422fcb4c',
+    },
+  },
   compatibilityDate: '2024-11-01',
   postcss: {
     plugins: {
