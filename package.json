@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.7.1",
+    "@nuxtjs/svg": "^0.4.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@primevue/nuxt-module": "^4.2.3",
     "@tailwindcss/typography": "^0.5.15",

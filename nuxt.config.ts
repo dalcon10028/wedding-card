@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       'autoprefixer': {},
     },
   },
+  buildModules: ['@nuxtjs/svg'],
   eslint: {
     config: {
       stylistic: true,
