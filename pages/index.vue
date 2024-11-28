@@ -1,4 +1,12 @@
 <script lang="ts" setup>
+import { parseISO, intlFormat, format } from 'date-fns'
+import { ko } from 'date-fns/locale'
+
+const route = useRoute()
+
+const isBrideFirst = !!route.query.brideFirst
+
+const { public: { groom, bride, wedding } } = useRuntimeConfig()
 </script>
 
 <template>
@@ -6,10 +14,10 @@
     <main class="flex flex-col min-h-screen">
       <div class="w-full p-5 text-center">
         <h2 class="text-3xl font-serif pb-1.5">
-          2025/3/29
+          {{ intlFormat(wedding.date, { locale: 'ko-KR' }) }}
         </h2>
         <p class="font-serif text-base uppercase">
-          saturday
+          {{ format(wedding.date, 'EEEE') }}
         </p>
       </div>
       <div class="flex justify-center">
@@ -22,13 +30,13 @@
       </div>
       <div class="flex flex-col gap-5 py-8 font-sans text-center">
         <div class="flex justify-center gap-2 mx-auto text-2xl">
-          <span>이연권</span>
+          <span>{{ isBrideFirst ? bride.name : groom.name }}</span>
           <span>·</span>
-          <span>유하얀</span>
+          <span>{{ isBrideFirst ? groom.name : bride.name }}</span>
         </div>
         <div class="text-lg">
-          <p>2025년 3월 29일 토요일 오후 4시 30분</p>
-          <p>웨딩시티 신도림 7F, 아스타 홀</p>
+          <p>{{ format(wedding.date, 'yyyy년 M월 d일 EEEE a h시 mm분', { locale: ko }) }}</p>
+          <p>{{ wedding.place }}</p>
         </div>
       </div>
     </main>
@@ -53,10 +61,18 @@
       </div>
       <div class="pb-5 text-center">
         <div>
-          <span>김김김·이이이</span>의 장남 <span>이연권</span>
+          <relation-text
+            :target="isBrideFirst ? 'bride' : 'groom'"
+            :bride="bride"
+            :groom="groom"
+          />
         </div>
         <div>
-          <span>김김김·이이이</span>의 장남 <span>이연권</span>
+          <relation-text
+            :target="isBrideFirst ? 'groom' : 'bride'"
+            :bride="bride"
+            :groom="groom"
+          />
         </div>
       </div>
       <div class="text-center">
@@ -65,70 +81,16 @@
           title="연락하기"
         >
           <div class="mx-auto mt-12 w-96">
-            <div class="mx-4 mb-10 text-sm">
-              <div class="text-start text-[#ccc]">
-                신랑측 <span class="uppercase text-xs tracking-widest text-[#999]">groom</span>
-              </div>
-              <Divider type="dotted" />
-              <div class="grid grid-cols-3 gap-2.5 my-5 text-white leading-10">
-                <div class="text-start text-[#ccc]">
-                  신랑
-                </div>
-                <div>이연권</div>
-                <div>
-                  <Button
-                    href="tel:0100000000"
-                    as="a"
-                    icon="pi pi-phone"
-                    class="p-button-rounded p-button-text p-button-sm"
-                  />
-                  <Button
-                    href="sms:01000000000"
-                    as="a"
-                    icon="pi pi-envelope"
-                    class="p-button-rounded p-button-text p-button-sm"
-                  />
-                </div>
-
-                <div class="text-start text-[#ccc]">
-                  신랑 아버지
-                </div>
-                <div>이연권</div>
-                <div>
-                  <Button
-                    href="tel:0100000000"
-                    as="a"
-                    icon="pi pi-phone"
-                    class="p-button-rounded p-button-text p-button-sm"
-                  />
-                  <Button
-                    href="sms:01000000000"
-                    as="a"
-                    icon="pi pi-envelope"
-                    class="p-button-rounded p-button-text p-button-sm"
-                  />
-                </div>
-
-                <div class="text-start text-[#ccc]">
-                  신랑 어머니
-                </div>
-                <div>이연권</div>
-                <div>
-                  <Button
-                    href="tel:0100000000"
-                    as="a"
-                    icon="pi pi-phone"
-                    class="p-button-rounded p-button-text p-button-sm"
-                  />
-                  <Button
-                    href="sms:01000000000"
-                    as="a"
-                    icon="pi pi-envelope"
-                    class="p-button-rounded p-button-text p-button-sm"
-                  />
-                </div>
-              </div>
-            </div>
+            <contact-box
+              :target="isBrideFirst ? 'bride' : 'groom'"
+              :bride="bride"
+              :groom="groom"
+            />
+            <contact-box
+              :target="isBrideFirst ? 'groom' : 'bride'"
+              :bride="bride"
+              :groom="groom"
+            />
           </div>
         </drawer-button>
       </div>
@@ -148,28 +110,34 @@
         pt:header:class="hidden"
         @click.stop
       />
-      <p class="text-base">
-        연권, 하얀의 결혼식이 34일 지났습니다.
-      </p>
+
+      <div class="flex flex-col gap-2.5">
+        <date-count-down :d-day="wedding.date" />
+        <left-date-text
+          :is-bride-first="isBrideFirst"
+          :wedding-date="wedding.date"
+          :bride="bride"
+          :groom="groom"
+        />
+      </div>
     </section>
 
     <fade-in-section
       name="Location"
       title="오시는 길"
-      class="h-screen"
     >
       <div class="px-8 mt-4">
         <div class="text-2xl">
-          웨딩스퀘어 강변 3F, 무슨무슨홀
+          {{ wedding.place }}
         </div>
         <div class="text-xl">
-          서울 광진구 광나루로56길 85
+          {{ wedding.address }}
         </div>
       </div>
       <div class="h-64 my-7">
         <Map />
       </div>
-      <div class="px-8 text-start">
+      <div class="px-8 text-start text-[#555]">
         <div>
           <div class="mb-3 text-base">
             네비게이션
@@ -178,39 +146,9 @@
             원하시는 앱을 선택하시면 길안내가 시작됩니다.
           </div>
           <div class="flex justify-center gap-2 mt-3">
-            <Button
-              label="Profile"
-              icon="pi pi-user"
-              variant="outlined"
-            >
-              <Avatar
-                image="/logo/kakao-navi.webp"
-                class="w-4 h-4"
-              />
-              카카오내비
-            </Button>
-            <Button
-              label="Profile"
-              icon="pi pi-user"
-              variant="outlined"
-            >
-              <Avatar
-                image="/logo/tmap.webp"
-                class="w-4 h-4"
-              />
-              <span class="text-base">티맵</span>
-            </Button>
-            <Button
-              label="Profile"
-              icon="pi pi-user"
-              variant="outlined"
-            >
-              <Avatar
-                image="/logo/naver-map.webp"
-                class="w-4 h-4"
-              />
-              네이버맵
-            </Button>
+            <navigation-button provider="kakao" />
+            <navigation-button provider="tmap" />
+            <navigation-button provider="naver" />
           </div>
         </div>
         <Divider />
@@ -218,12 +156,11 @@
           <div class="mb-3 text-base">
             지하철
           </div>
-          <div>
+          <div class="text-sm leading-7">
             <p>
-              <span class="text-[#0d347f]">●</span> 1호선,
-              <span class="text-[#0d347f]">●</span> 2호선 강변역 3번 출구
+              <span :class="`text-[#3b9f37]`">●</span> 강변역(2호선) 1, 2번 출구 지하통로
             </p>
-            <p>&nbsp;&nbsp;· 테크노마트판매동 지하1층과 연결</p>
+            <p>&nbsp;&nbsp;&nbsp;· 강변 테크노마트 연결</p>
           </div>
         </div>
         <Divider />
@@ -231,12 +168,22 @@
           <div class="mb-3 text-base">
             버스
           </div>
-          <div>
+          <div class="text-sm leading-7">
             <p>
-              <span class="text-[#0d347f]">●</span> 1호선,
-              <span class="text-[#0d347f]">●</span> 2호선 강변역 3번 출구
+              <span class="text-[#6fb26c]">●</span> 마을 : 강동01, 광진01, 광진03, 광진04
             </p>
-            <p>&nbsp;&nbsp;· 테크노마트판매동 지하1층과 연결</p>
+            <p>
+              <span class="text-[#3b9f37]">●</span> 지선 : 2224, 3214, 3212
+            </p>
+            <p>
+              <span class="text-[#0d347f]">●</span> 경기(일반) : 1, 1-1. 1-2, 9, 9-1, 13, 13-2, 15, 91, 92, 93,  95, 96, 97, 112, 112-1, 2000-1, 2000-3,2000-4
+            </p>
+            <p>
+              <span class="text-[#dd5c32]">●</span> 경기(직행) : 11, 112, 1113, 1113-1, 1113-2, 1117, 1650, 1660, 5600, 5700
+            </p>
+            <p>
+              <span class="text-[#6ca8ce]">●</span> 시외 · 고속버스 : 동서울종합터미널 하차 후 강변역 통로 이용 (도보5분)
+            </p>
           </div>
         </div>
         <Divider />
@@ -244,12 +191,17 @@
           <div class="mb-3 text-base">
             자가용
           </div>
-          <div>
+          <div class="text-sm leading-7">
             <p>
-              <span class="text-[#0d347f]">●</span> 1호선,
-              <span class="text-[#0d347f]">●</span> 2호선 강변역 3번 출구
+              ● 네비게이션 : "강변테크노마트"(광진구 구의동) 또는 "강변역" 검색
             </p>
-            <p>&nbsp;&nbsp;· 테크노마트판매동 지하1층과 연결</p>
+            <p>&nbsp;&nbsp;· 주소검색</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; “서울 광진구 광나루로56길 85” 또는</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; “구의동 546-4” 입력</p>
+
+            <p>● 주차장 안내</p>
+            <p>&nbsp;&nbsp;· 테크노마트 지하주차장 이용 (B3, B4)</p>
+            <p>&nbsp;&nbsp;· 주차요원의 안내를 받으세요.</p>
           </div>
         </div>
       </div>
@@ -297,10 +249,10 @@
           </AccordionContent>
         </AccordionPanel>
         <AccordionPanel value="1">
-          <AccordionHeader pt:root:class="bg-[rgb(243,243,243)]">
+          <AccordionHeader pt:root:class="!bg-[rgb(243,243,243)]">
             신부측 계좌번호
           </AccordionHeader>
-          <AccordionContent>
+          <AccordionContent pt:content:class="p-5">
             <div class="flex flex-col gap-1">
               <div class="flex justify-between">
                 <span>토스뱅크 110-000-000000</span>

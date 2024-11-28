@@ -10,7 +10,6 @@ export default defineNuxtPlugin({
     const isDev = import.meta.dev
 
     amplitude.init(amplitudeApiKey, {
-      logLevel: isDev ? 4 : 2, // debug in dev, Warn in prod
       autocapture: {
         attribution: true,
         pageViews: true,
