@@ -1,3 +1,9 @@
+export type Person = {
+  name: string
+  accountNumber: string
+  phoneNumber: string
+}
+
 declare global {
   interface Window {
     kakao: {
@@ -19,6 +25,21 @@ declare module 'nuxt/schema' {
   interface PublicRuntimeConfig {
     public: {
       amplitudeApiKey: string
+
+      groom: Person & {
+        father: Person
+        mother: Person
+      }
+
+      bride: Person & {
+        father: Person
+        mother: Person
+      }
+
+      wedding: {
+        place: string
+        date: string
+      }
     }
   }
 }
