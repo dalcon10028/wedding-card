@@ -2,7 +2,7 @@
 Wedding Card
 </h3>
 <p align="center">
-나의 특별한 결혼식 청첩장 만들기
+모바일 청첩장
 </p>
 
 ![typescript](https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -21,13 +21,13 @@ pnpm
 
 ## Features
 
-- [ ] 안내사항
-- [ ] 참석의사
-- [ ] 갤러리
-- [ ] 계좌번호
+- [x] 안내사항
+- [x] 참석의사
+- [x] 갤러리
+- [x] 계좌번호
 - [ ] 카카오톡 Open Graph
-- [ ] 네비게이션
-- [ ] D-Day
+- [x] 네비게이션
+- [x] D-Day
 
 
 ## Setup
