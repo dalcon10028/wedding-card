@@ -39,7 +39,10 @@ const imageClick = (index: number) => {
 </script>
 
 <template>
-  <section>
+  <fade-in-section
+    name="gallery"
+    title="우리의 순간"
+  >
     <Galleria
       v-model:active-index="activeIndex"
       v-model:visible="displayCustom"
@@ -84,7 +87,7 @@ const imageClick = (index: number) => {
         </div>
       </div>
     </div>
-  </section>
+  </fade-in-section>
 </template>
 
 <style>

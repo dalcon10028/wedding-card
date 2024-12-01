@@ -33,7 +33,7 @@ const { stop } = useIntersectionObserver(
   >
     <transition name="fade">
       <div v-show="targetIsVisible">
-        <div class="text-center">
+        <div class="mb-8 text-center">
           <div class="text-lg uppercase">
             {{ name }}
           </div>

@@ -12,8 +12,6 @@ const days = computed(() => `${countDown.days.value}`.padStart(2, '0'))
 const hours = computed(() => `${countDown.hours.value}`.padStart(2, '0'))
 const minutes = computed(() => `${countDown.minutes.value}`.padStart(2, '0'))
 const seconds = computed(() => `${countDown.seconds.value}`.padStart(2, '0'))
-
-console.log(hours)
 </script>
 
 <template>

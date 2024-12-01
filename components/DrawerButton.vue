@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 
-const { name, title } = defineProps<{
+const { name, title, label, icon } = defineProps<{
   name: string
   title: string
+  label: string
+  icon: string
 }>()
 
 const visible = ref(false)
@@ -14,7 +16,7 @@ const visible = ref(false)
     <Dialog
       v-model:visible="visible"
       modal
-      pt:root:class="border-0 bg-transparent w-screen h-screen shadow-none text-center"
+      pt:root:class="w-screen h-screen text-center bg-transparent border-0 shadow-none"
       pt:mask:class="backdrop-blur-sm !bg-[rgba(56,44,48,.84)]"
       pt:mask:style="display: block;"
       :close-button-props="{ icon: 'pi pi-times', variant: 'text', rounded: true }"
@@ -31,8 +33,8 @@ const visible = ref(false)
       <slot />
     </Dialog>
     <Button
-      label="연락하기"
-      icon="pi pi-phone"
+      :label="label"
+      :icon="icon"
       @click="visible = true"
     />
   </div>
