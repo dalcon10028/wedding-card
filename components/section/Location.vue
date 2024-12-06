@@ -12,10 +12,10 @@ const { public: { wedding } } = useRuntimeConfig()
     title="오시는 길"
   >
     <div class="px-8 mt-4">
-      <div class="text-2xl">
+      <div class="text-lg leading-8 text-black">
         {{ wedding.place }}
       </div>
-      <div class="text-xl">
+      <div class="leading-8 text-[#797979]">
         {{ wedding.address }}
       </div>
     </div>
@@ -24,7 +24,7 @@ const { public: { wedding } } = useRuntimeConfig()
     </div>
     <div class="px-8 text-start text-[#555]">
       <div>
-        <div class="mb-3 text-base">
+        <div class="mb-3 font-bold">
           네비게이션
         </div>
         <div class="text-base">
@@ -38,21 +38,21 @@ const { public: { wedding } } = useRuntimeConfig()
       </div>
       <Divider />
       <div>
-        <div class="mb-3 text-base">
-          <SubwaySvg class="inline-block w-6 h-6" />
+        <div class="flex items-center mb-3 text-base font-bold">
+          <SubwaySvg class="inline-block w-5 h-5 mr-1" />
           지하철
         </div>
         <div class="text-sm leading-7">
           <p>
-            <span :class="`text-[#3b9f37]`">●</span> 강변역(2호선) 1, 2번 출구 지하통로
+            <span class="text-[#3b9f37]">● 2호선 강변역</span> 1, 2번 출구 지하통로
           </p>
           <p>&nbsp;&nbsp;&nbsp;· 강변 테크노마트 연결</p>
         </div>
       </div>
       <Divider />
       <div>
-        <div class="mb-3 text-base">
-          <BusSvg class="inline-block w-6 h-6" />
+        <div class="flex items-center mb-3 text-base font-bold">
+          <BusSvg class="inline-block w-5 h-5 mr-1" />
           버스
         </div>
         <div class="text-sm leading-7">
@@ -75,13 +75,13 @@ const { public: { wedding } } = useRuntimeConfig()
       </div>
       <Divider />
       <div>
-        <div class="mb-3 text-base">
-          <CarSvg class="inline-block w-6 h-6" />
+        <div class="flex items-center mb-3 text-base font-bold">
+          <CarSvg class="inline-block w-5 h-5 mr-1" />
           자가용
         </div>
         <div class="text-sm leading-7">
           <p>
-            ● 네비게이션 : "강변테크노마트"(광진구 구의동) 또는 "강변역" 검색
+            ● 네비게이션 : "강변테크노마트"(광진구 구의동) 검색
           </p>
           <p>&nbsp;&nbsp;· 주소검색</p>
           <p>&nbsp;&nbsp;&nbsp;&nbsp; “서울 광진구 광나루로56길 85” 또는</p>

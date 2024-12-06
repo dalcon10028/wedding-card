@@ -7,110 +7,63 @@ const route = useRoute()
 const isBrideFirst = !!route.query.brideFirst
 
 const { public: { groom, bride, wedding } } = useRuntimeConfig()
+
+const a = new Date(wedding.date)
 </script>
 
 <template>
   <div class="flex flex-col text-center">
-    <main class="flex flex-col min-h-screen">
-      <div class="w-full p-5 text-center">
-        <h2 class="text-3xl font-serif pb-1.5">
-          {{ intlFormat(wedding.date, { locale: 'ko-KR' }) }}
+    <main class="flex flex-col min-h-screen px-4">
+      <div class="w-full py-8 text-center">
+        <h2 class="text-3xl font-serif font-thin pb-1.5 flex items-center justify-center">
+          <span>{{ format(wedding.date, 'yyyy') }}</span>
+          <span class="mx-1.5 text-xl">/</span>
+          <span>{{ format(wedding.date, 'M') }}</span>
+          <span class="mx-1.5 text-xl">/</span>
+          <span>{{ format(wedding.date, 'd') }}</span>
         </h2>
-        <p class="font-serif text-base uppercase">
+        <p class="font-serif text-base tracking-widest uppercase">
           {{ format(wedding.date, 'EEEE') }}
         </p>
       </div>
       <div class="flex justify-center">
-        <picture>
+        <picture class="w-full aspect-auto">
           <img
-            src="https://picsum.photos/425/585"
+            fetchpriority="high"
+            src="https://picsum.photos/1280/1762"
             alt="main"
           >
         </picture>
       </div>
-      <div class="flex flex-col gap-5 py-8 font-sans text-center">
-        <div class="flex justify-center gap-2 mx-auto text-2xl">
+      <div class="flex flex-col gap-5 font-sans text-center py-9">
+        <div class="flex justify-center gap-3 mx-auto text-xl">
           <span>{{ isBrideFirst ? bride.name : groom.name }}</span>
           <span>·</span>
           <span>{{ isBrideFirst ? groom.name : bride.name }}</span>
         </div>
-        <div class="text-lg">
+        <div class="font-light text-base leading-8 text-[#544f4f]">
           <p>{{ format(wedding.date, 'yyyy년 M월 d일 EEEE a h시 mm분', { locale: ko }) }}</p>
           <p>{{ wedding.place }}</p>
         </div>
       </div>
     </main>
 
-    <fade-in-section
-      name="Invitation"
-      title="소중한 분들을 초대합니다"
-      class="h-screen px-8"
-    >
-      <div class="flex flex-col gap-5 my-8 text-center">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Atque nam cupiditate, laudantium sit vitae praesentium quis</p>
-        <p>veritatis ratione reiciendis quam, tempora ab quae et assumenda aliquid, natus repellat.</p>
-        <p>Corporis, error.</p>
-      </div>
-      <div class="flex justify-center py-8">
-        <img
-          class="rounded-xl"
-          src="https://picsum.photos/360/240"
-          alt="test"
-        >
-      </div>
-      <div class="pb-5 text-center">
-        <div>
-          <relation-text
-            :target="isBrideFirst ? 'bride' : 'groom'"
-            :bride="bride"
-            :groom="groom"
-          />
-        </div>
-        <div>
-          <relation-text
-            :target="isBrideFirst ? 'groom' : 'bride'"
-            :bride="bride"
-            :groom="groom"
-          />
-        </div>
-      </div>
-      <div class="text-center">
-        <drawer-button
-          name="contact"
-          title="연락하기"
-          label="연락하기"
-          icon="pi pi-phone"
-        >
-          <div class="mx-auto mt-12 w-96">
-            <contact-box
-              :target="isBrideFirst ? 'bride' : 'groom'"
-              :bride="bride"
-              :groom="groom"
-            />
-            <contact-box
-              :target="isBrideFirst ? 'groom' : 'bride'"
-              :bride="bride"
-              :groom="groom"
-            />
-          </div>
-        </drawer-button>
-      </div>
-    </fade-in-section>
+    <section-invitation />
 
-    <section class="px-8">
-      <h2>2025.3.29</h2>
-      <p>토요일 오후 4시 50분</p>
+    <section class="px-8 py-16 bg-[#f6f5f5]">
+      <p class="font-serif text-2xl text-[#524548] tracking-widest leading-8">
+        2025.3.29
+      </p>
+      <p class="leading-8 tracking-wide">
+        토요일 오후 4시 40분
+      </p>
       <DatePicker
         inline
-        :readonly="true"
         :show-other-months="false"
-        :model-value="new Date('2025-3-29')"
-        :default-value="new Date('2025-3-29')"
-        class="w-full p-8"
+        :model-value="new Date(wedding.date)"
+        class="w-full p-8 "
         pt:panel:class="bg-transparent border-l-0 border-r-0 border-t-1 border-b-1"
         pt:header:class="hidden"
-        @click.stop
       />
 
       <div class="flex flex-col gap-2.5">

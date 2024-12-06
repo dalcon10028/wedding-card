@@ -1,4 +1,5 @@
 import svgLoader from 'vite-svg-loader'
+import { defaultOptions } from 'primevue/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -20,12 +21,12 @@ export default defineNuxtConfig({
         accountNumber: '123-456-789',
         phoneNumber: '010-1234-5678',
         father: {
-          name: '이연권1부',
+          name: '이해산',
           accountNumber: '123-456-789',
           phoneNumber: '010-1234-5678',
         },
         mother: {
-          name: '이연권1모',
+          name: '이선영',
           accountNumber: '123-456-789',
           phoneNumber: '010-1234-5678',
         },
@@ -36,12 +37,12 @@ export default defineNuxtConfig({
         accountNumber: '123-456-789',
         phoneNumber: '010-1234-5678',
         father: {
-          name: '이연권2부',
+          name: '유종관',
           accountNumber: '123-456-789',
           phoneNumber: '010-1234-5678',
         },
         mother: {
-          name: '이연권2모',
+          name: '지명옥',
           accountNumber: '123-456-789',
           phoneNumber: '010-1234-5678',
         },
@@ -49,7 +50,7 @@ export default defineNuxtConfig({
 
       wedding: {
         place: '강변 웨딩스퀘어 4F, 그레이스 홀',
-        address: '서울특별시 광진구 광나루로56길 85 테크노마트',
+        address: '서울 광진구 광나루로56길 85 테크노마트',
         longitude: '127.095692162256',
         latitude: '37.535725176732',
         date: '2025-03-29T16:40',
@@ -75,18 +76,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Roboto': true,
-      'Josefin+Sans': true,
-      'Lato': [100, 300],
-      'Raleway': {
-        wght: [100, 400],
-        ital: [100],
-      },
-      'Inter': '200..700',
-      'Crimson Pro': {
-        wght: '200..900',
-        ital: '200..700',
-      },
+      'Gowun Dodum': [300, 400, 700],
+      'Crimson Pro': [200],
     },
   },
   primevue: {
@@ -99,6 +90,9 @@ export default defineNuxtConfig({
           },
         },
       },
+    },
+    locale: {
+      ...defaultOptions.locale,
     },
   },
 })

@@ -18,9 +18,9 @@ const leftDate = computed(() => differenceInDays(parseISO(weddingDate), new Date
 </script>
 
 <template>
-  <p class="my-2 text-base">
-    {{ isBrideFirst ? bride.name : groom.name }}, {{ isBrideFirst ? groom.name : bride.name }}의 결혼식이
-    <span>{{ leftDate === 0 ? '오늘' : `${leftDate}일` }}</span>
+  <p class="my-2">
+    {{ isBrideFirst ? bride.name.slice(1) : groom.name.slice(1) }} <span class="text-[#ea7664] text-xs">♥</span> {{ isBrideFirst ? groom.name.slice(1) : bride.name.slice(1) }}의 결혼식이
+    <span class="text-[#ea7664]">{{ leftDate === 0 ? '오늘' : `${leftDate}일` }}</span>
     <template v-if="leftDate > 0">
       남았습니다.
     </template>

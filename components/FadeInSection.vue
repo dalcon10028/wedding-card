@@ -15,7 +15,7 @@ const {
 const target = ref<HTMLElement | null>(null)
 const targetIsVisible = ref(false)
 
-const { stop } = useIntersectionObserver(
+useIntersectionObserver(
   target,
   ([entry], observerElement) => {
     targetIsVisible.value = entry?.isIntersecting || false
@@ -34,10 +34,10 @@ const { stop } = useIntersectionObserver(
     <transition name="fade">
       <div v-show="targetIsVisible">
         <div class="mb-8 text-center">
-          <div class="text-lg uppercase">
+          <div class="text-xs tracking-widest uppercase text-[#c2b2b2]">
             {{ name }}
           </div>
-          <div class="text-2xl">
+          <div class="text-xl leading-10 text-[#89757a]">
             {{ title }}
           </div>
         </div>

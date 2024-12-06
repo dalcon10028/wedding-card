@@ -33,6 +33,9 @@ const visible = ref(false)
       <slot />
     </Dialog>
     <Button
+      pt:root:class="w-40 text-sm"
+      variant="outlined"
+      rounded
       :label="label"
       :icon="icon"
       @click="visible = true"
