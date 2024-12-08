@@ -27,7 +27,7 @@ const { public: { wedding } } = useRuntimeConfig()
         <div class="mb-3 font-bold">
           네비게이션
         </div>
-        <div class="text-base">
+        <div class="text-sm">
           원하시는 앱을 선택하시면 길안내가 시작됩니다.
         </div>
         <div class="flex justify-between mt-3">
