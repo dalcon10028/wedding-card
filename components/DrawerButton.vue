@@ -18,6 +18,7 @@ const visible = ref(false)
       modal
       pt:root:class="w-screen h-screen text-center bg-transparent border-0 shadow-none"
       pt:mask:class="backdrop-blur-sm !bg-[rgba(56,44,48,.84)]"
+      pt:content:class="overflow-y-visible"
       pt:mask:style="display: block;"
       :close-button-props="{ icon: 'pi pi-times', variant: 'text', rounded: true }"
     >

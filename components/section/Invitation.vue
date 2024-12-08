@@ -12,7 +12,7 @@ const { public: { groom, bride } } = useRuntimeConfig()
   <fade-in-section
     name="Invitation"
     title="소중한 분들을 초대합니다"
-    class="h-screen px-6"
+    class="px-6"
   >
     <div class="flex flex-col gap-5 my-8 text-center">
       <div class="flex justify-center">
@@ -56,7 +56,7 @@ const { public: { groom, bride } } = useRuntimeConfig()
         label="연락하기"
         icon="pi pi-phone"
       >
-        <div class="mx-auto mt-12 w-96">
+        <div class="mx-auto mt-12 overflow-y-visible max-w-96">
           <contact-box
             :target="isBrideFirst ? 'bride' : 'groom'"
             :bride="bride"

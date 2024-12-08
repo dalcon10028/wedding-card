@@ -22,7 +22,7 @@ const { public: { wedding } } = useRuntimeConfig()
     <div class="h-64 my-7">
       <Map />
     </div>
-    <div class="px-8 text-start text-[#555]">
+    <div class="px-8 text-start text-[#555] flex flex-col gap-2">
       <div>
         <div class="mb-3 font-bold">
           네비게이션
@@ -30,7 +30,7 @@ const { public: { wedding } } = useRuntimeConfig()
         <div class="text-base">
           원하시는 앱을 선택하시면 길안내가 시작됩니다.
         </div>
-        <div class="flex justify-center gap-2 mt-3">
+        <div class="flex justify-between mt-3">
           <navigation-button provider="kakao" />
           <navigation-button provider="tmap" />
           <navigation-button provider="naver" />

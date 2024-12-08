@@ -6,6 +6,7 @@ export default {
     fontFamily: {
       sans: ['Gowun Dodum', 'system-ui', 'sans-serif'],
       serif: ['Crimson Pro', 'monospace'],
+      account: ['Noto Sans Korean'],
     },
     extend: {},
   },

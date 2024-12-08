@@ -52,10 +52,10 @@ const a = new Date(wedding.date)
 
     <section class="px-8 py-16 bg-[#f6f5f5]">
       <p class="font-serif text-2xl text-[#524548] tracking-widest leading-8">
-        2025.3.29
+        {{ format(wedding.date, 'yyyy.M.d') }}
       </p>
       <p class="leading-8 tracking-wide">
-        토요일 오후 4시 40분
+        {{ format(wedding.date, 'EEEE a h시 mm분', { locale: ko }) }}
       </p>
       <DatePicker
         inline
