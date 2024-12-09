@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^2.11.9",
+    "@nuxt/image": "1.8.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@primevue/forms": "^4.2.4",
     "date-fns": "^4.1.0",

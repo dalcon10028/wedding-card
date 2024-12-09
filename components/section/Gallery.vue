@@ -8,8 +8,8 @@ const chunk = (arr: any[], size: number) => {
 }
 
 const images = ref(range(0, 11).map(index => ({
-  itemImageSrc: `https://picsum.photos/1280/1920?random=${index}`,
-  thumbnailImageSrc: `https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image${index === 0 ? '' : `-${index}`}.jpg`,
+  itemImageSrc: `/images/gallery/gallery1.jpeg`,
+  thumbnailImageSrc: `/images/gallery/gallery1.jpeg`,
   alt: `Image ${index}`,
 })))
 
@@ -56,18 +56,18 @@ const imageClick = (index: number) => {
       :show-thumbnails="false"
     >
       <template #item="slotProps">
-        <img
+        <NuxtImg
           :src="slotProps.item.itemImageSrc"
           :alt="slotProps.item.alt"
           style="width: 100%; display: block"
-        >
+        />
       </template>
       <template #thumbnail="slotProps">
-        <img
+        <NuxtImg
           :src="slotProps.item.thumbnailImageSrc"
           :alt="slotProps.item.alt"
           style="display: block"
-        >
+        />
       </template>
     </Galleria>
     <div class="grid w-full grid-flow-row grid-cols-2 gap-2 px-6 auto-rows-max">
@@ -76,14 +76,14 @@ const imageClick = (index: number) => {
         :key="index"
       >
         <div class="grid gap-2">
-          <img
+          <NuxtImg
             v-for="(image) of imageGroup"
             :key="image.alt"
             :src="image.thumbnailImageSrc"
             :alt="'alt'"
             class="h-auto max-w-full rounded-lg cursor-pointer"
             @click="imageClick(index)"
-          >
+          />
         </div>
       </div>
     </div>

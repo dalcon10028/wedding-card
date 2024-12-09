@@ -8,12 +8,18 @@ const isBrideFirst = !!route.query.brideFirst
 
 const { public: { groom, bride, wedding } } = useRuntimeConfig()
 
+useSeoMeta({
+  title: `${isBrideFirst ? `${bride.name} & ${groom.name}` : `${groom.name} & ${bride.name}`} 결혼식에 초대합니다.`,
+  description: '결혼식에 초대합니다.',
+  image: 'https://picsum.photos/1280/1762',
+})
+
 const a = new Date(wedding.date)
 </script>
 
 <template>
   <div class="flex flex-col text-center">
-    <main class="flex flex-col min-h-screen px-4">
+    <main class="flex flex-col min-h-screen px-4 bg-[#f6f5f5]">
       <div class="w-full py-8 text-center">
         <h2 class="text-3xl font-serif font-thin pb-1.5 flex items-center justify-center">
           <span>{{ format(wedding.date, 'yyyy') }}</span>
@@ -27,13 +33,13 @@ const a = new Date(wedding.date)
         </p>
       </div>
       <div class="flex justify-center">
-        <picture class="w-full aspect-auto">
-          <img
-            fetchpriority="high"
-            src="https://picsum.photos/1280/1762"
-            alt="main"
-          >
-        </picture>
+        <NuxtImg
+          src="/images/main.jpeg"
+          alt="메인 이미지"
+          width="412"
+          height="567"
+          class="w-full"
+        />
       </div>
       <div class="flex flex-col gap-5 font-sans text-center py-9">
         <div class="flex justify-center gap-3 mx-auto text-xl">

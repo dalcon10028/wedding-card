@@ -3,7 +3,7 @@ import { defaultOptions } from 'primevue/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@vueuse/nuxt', '@nuxtjs/google-fonts', '@nuxt/eslint', '@nuxt/scripts'],
+  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@vueuse/nuxt', '@nuxtjs/google-fonts', '@nuxt/eslint', '@nuxt/image'],
   devtools: { enabled: true },
   css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css', 'primeicons/primeicons.css', 'vue3-toastify/dist/index.css'],
   runtimeConfig: {
@@ -95,20 +95,17 @@ export default defineNuxtConfig({
       'Noto Sans Korean': [400],
     },
   },
-  head: {
-    // <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
-    script: [
-      {
-        src: 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js',
-        integrity: 'sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka',
-        crossorigin: 'anonymous',
-      },
-      // //dapi.kakao.com/v2/maps/sdk.js?appkey=7fccb30eb56474d5ad73def74b62250a&libraries=services
-      {
-        src: '//dapi.kakao.com/v2/maps/sdk.js?appkey=7fccb30eb56474d5ad73def74b62250a&libraries=services',
-        type: 'text/javascript',
-      },
-    ],
+  image: {
+    // https://image.nuxt.com/get-started/configuration
+    screens: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      'xxl': 1536,
+      '2xl': 1536,
+    },
   },
   primevue: {
     options: { theme: 'none' },
@@ -125,4 +122,5 @@ export default defineNuxtConfig({
       ...defaultOptions.locale,
     },
   },
+
 })
