@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-// import { useScriptTag } from '@vueuse/core'
-
 const mapRef = ref<HTMLDivElement>()
 
 const { load } = useScriptTag(
@@ -8,10 +6,6 @@ const { load } = useScriptTag(
   () => console.log('Kakao Map SDK loaded'),
   { manual: true, async: true, type: 'text/javascript' },
 )
-
-onMounted(async () => {
-  // await load()
-})
 
 onMounted(async () => {
   await load()

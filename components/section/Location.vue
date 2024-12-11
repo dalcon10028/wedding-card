@@ -4,12 +4,15 @@ import SubwaySvg from '~/assets/svg/subway.svg?component'
 import CarSvg from '~/assets/svg/car.svg?component'
 
 const { public: { wedding } } = useRuntimeConfig()
+
+const onLoad = ref(false)
 </script>
 
 <template>
   <fade-in-section
     name="location"
     title="오시는 길"
+    @update:target-is-visible="onLoad = $event"
   >
     <div class="px-8 mt-4">
       <div class="text-lg leading-8 text-black">
@@ -20,7 +23,7 @@ const { public: { wedding } } = useRuntimeConfig()
       </div>
     </div>
     <div class="h-64 my-7">
-      <Map />
+      <Map v-if="onLoad" />
     </div>
     <div class="px-8 text-start text-[#555] flex flex-col gap-2">
       <div>
@@ -89,7 +92,8 @@ const { public: { wedding } } = useRuntimeConfig()
 
           <p>● 주차장 안내</p>
           <p>&nbsp;&nbsp;· 테크노마트 지하주차장 이용 (B3, B4)</p>
-          <p>&nbsp;&nbsp;· 주차요원의 안내를 받으세요.</p>
+          <p>&nbsp;&nbsp;· 엘리베이터가 혼잡하므로,</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp; 에스컬레이터를 이용하시면 더욱 편리합니다.</p>
         </div>
       </div>
     </div>

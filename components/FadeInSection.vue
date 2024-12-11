@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useIntersectionObserver } from '@vueuse/core'
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 
 const {
   name,
@@ -15,10 +15,13 @@ const {
 const target = ref<HTMLElement | null>(null)
 const targetIsVisible = ref(false)
 
+const emit = defineEmits(['update:targetIsVisible'])
+
 useIntersectionObserver(
   target,
   ([entry], observerElement) => {
     targetIsVisible.value = entry?.isIntersecting || false
+    emit('update:targetIsVisible', targetIsVisible.value)
     if (entry?.isIntersecting) {
       observerElement.unobserve(entry.target)
     }
