@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+const { public: { naverMapClientId } } = useRuntimeConfig()
+
 const mapRef = ref<HTMLDivElement>()
 
 const { load } = useScriptTag(
-  'https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=fdvtct88qw',
+  `https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${naverMapClientId}`,
   () => console.log('Kakao Map SDK loaded'),
   { manual: true, async: true, type: 'text/javascript' },
 )

@@ -9,6 +9,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       amplitudeApiKey: 'bfb5c83035c7a5d0537d1ada422fcb4c',
+      naverMapClientId: 'fdvtct88qw',
+      kakaoAppKey: '7fccb30eb56474d5ad73def74b62250a',
 
       groom: {
         name: '이연권',

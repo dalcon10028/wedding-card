@@ -62,9 +62,8 @@ const onFormSubmit = (a: FormSubmitEvent) => {
   >
     <section class="flex flex-col gap-8 px-8">
       <Fieldset legend="식사안내">
-        <div class="p-5 mt-0">
-          <p>(수정필요)식사는 결혼식 및 사진 촬영이 끝난 후</p>
-          <p>웨딩홀 2층에서 뷔페식으로 진행됩니다.</p>
+        <div class="px-5 py-5 mt-0">
+          <p>(수정필요)식사는 결혼식 및 사진 촬영이 끝난 후 웨딩홀 2층에서 뷔페식으로 진행됩니다.</p>
           <p>&nbsp;</p>
           <p>부족함 없이 즐기실 수 있도록</p>
           <p>한식을 비롯해 중식, 양식, 일식 등 </p>
@@ -73,13 +72,11 @@ const onFormSubmit = (a: FormSubmitEvent) => {
       </Fieldset>
 
       <Fieldset legend="주차안내">
-        <div class="p-5 mt-0">
+        <div class="px-5 py-5 mt-0">
           <p>강변테크노마트 지하 주차장</p>
           <p>2시간 무료주차가 가능합니다.</p>
           <p>&nbsp;</p>
-          <p>입차 시 받은 주차권(1시간 제공)과</p>
-          <p>3층 안내 데스크에서 차량번호 등록 후</p>
-          <p>출차하시면 됩니다.</p>
+          <p>입차 시 받은 주차권(1시간 제공)과 3층 안내 데스크에서 차량번호 등록 후 출차하시면 됩니다.</p>
         </div>
       </Fieldset>
 

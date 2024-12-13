@@ -11,10 +11,7 @@ const { public: { groom, bride, wedding } } = useRuntimeConfig()
 useSeoMeta({
   title: `${isBrideFirst ? `${bride.name} & ${groom.name}` : `${groom.name} & ${bride.name}`} 결혼식에 초대합니다.`,
   description: '결혼식에 초대합니다.',
-  image: 'https://picsum.photos/1280/1762',
 })
-
-const a = new Date(wedding.date)
 </script>
 
 <template>
@@ -56,7 +53,7 @@ const a = new Date(wedding.date)
 
     <section-invitation />
 
-    <section class="px-8 py-16 bg-[#f6f5f5]">
+    <section class="px-10 py-16 bg-[#f6f5f5]">
       <p class="font-serif text-2xl text-[#524548] tracking-widest leading-8">
         {{ format(wedding.date, 'yyyy.M.d') }}
       </p>
@@ -67,7 +64,7 @@ const a = new Date(wedding.date)
         inline
         :show-other-months="false"
         :model-value="new Date(wedding.date)"
-        class="w-full p-8 "
+        class="w-full py-8"
         pt:panel:class="bg-transparent border-l-0 border-r-0 border-t-1 border-b-1"
         pt:header:class="hidden"
       />
@@ -87,9 +84,9 @@ const a = new Date(wedding.date)
 
     <section-notice />
 
-    <section-gallery />
+    <!-- <section-gallery /> -->
 
-    <section-account />
+    <!-- <section-account /> -->
 
     <section-footer />
   </div>
