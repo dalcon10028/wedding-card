@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue'
 import { useClipboard } from '@vueuse/core'
-import { toast, type ToastOptions } from 'vue3-toastify'
+import { toast } from 'vue3-toastify'
 import type { Person } from '~'
 
 const { person } = defineProps<{
@@ -15,6 +15,7 @@ const onClickCopy = () => {
     toast.error('복사 기능을 지원하지 않는 브라우저입니다.', {
       autoClose: 3000,
       position: toast.POSITION.TOP_CENTER,
+      hideProgressBar: true,
     })
     return
   }
@@ -22,6 +23,7 @@ const onClickCopy = () => {
   toast.info('계좌번호가 복사되었습니다.', {
     autoClose: 3000,
     position: toast.POSITION.TOP_CENTER,
+    hideProgressBar: true,
   })
 }
 </script>

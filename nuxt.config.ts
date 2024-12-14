@@ -1,5 +1,6 @@
 import svgLoader from 'vite-svg-loader'
 import { defaultOptions } from 'primevue/config'
+import { th } from 'date-fns/locale'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -8,9 +9,15 @@ export default defineNuxtConfig({
   css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css', 'primeicons/primeicons.css', 'vue3-toastify/dist/index.css'],
   runtimeConfig: {
     public: {
+
       amplitudeApiKey: 'bfb5c83035c7a5d0537d1ada422fcb4c',
       naverMapClientId: 'fdvtct88qw',
       kakaoAppKey: '7fccb30eb56474d5ad73def74b62250a',
+
+      share: {
+        // 526x528
+        thumbnail: 'http://k.kakaocdn.net/dn/bSbH9w/btqgegaEDfW/vD9KKV0hEintg6bZT4v4WK/kakaolink40_original.png',
+      },
 
       groom: {
         name: '이연권',
