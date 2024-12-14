@@ -63,7 +63,7 @@ const onFormSubmit = (a: FormSubmitEvent) => {
     <section class="flex flex-col gap-8 px-8">
       <Fieldset legend="식사안내">
         <div class="px-5 py-5 mt-0">
-          <p>(수정필요)식사는 결혼식 및 사진 촬영이 끝난 후 웨딩홀 2층에서 뷔페식으로 진행됩니다.</p>
+          <p>식사는 결혼식 및 사진 촬영이 끝난 후 웨딩홀 3층에서 뷔페식으로 진행됩니다.</p>
           <p>&nbsp;</p>
           <p>부족함 없이 즐기실 수 있도록</p>
           <p>한식을 비롯해 중식, 양식, 일식 등 </p>
