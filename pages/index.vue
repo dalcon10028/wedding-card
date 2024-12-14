@@ -3,6 +3,16 @@ import { parseISO, intlFormat, format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 
 const route = useRoute()
+useHead({
+  // oncontextmenu="return false"
+  // ondragstart="return false"
+  // onselectstart="return false"
+  bodyAttrs: {
+    oncontextmenu: 'return false',
+    ondragstart: 'return false',
+    onselectstart: 'return false',
+  },
+})
 
 const isBrideFirst = !!route.query.brideFirst
 
@@ -30,13 +40,14 @@ useSeoMeta({
         </p>
       </div>
       <div class="flex justify-center">
-        <NuxtImg
+        <div class="w-[412px] h-[567px] bg-transparent" />
+        <!-- <NuxtImg
           src="/images/main.jpeg"
           alt="메인 이미지"
           width="412"
           height="567"
           class="w-full"
-        />
+        /> -->
       </div>
       <div class="flex flex-col gap-5 font-sans text-center py-9">
         <div class="flex justify-center gap-3 mx-auto text-xl">
