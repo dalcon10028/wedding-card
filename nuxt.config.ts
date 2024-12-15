@@ -101,7 +101,7 @@ export default defineNuxtConfig({
     families: [
       { name: 'Gowun Dodum', provider: 'google', global: true },
       { name: 'Crimson Pro', provider: 'google', global: true },
-      { name: 'Noto Sans Korean', provider: 'google', global: true },
+      { name: 'Noto Sans KR', provider: 'google', global: true },
     ],
   },
   image: {
@@ -133,6 +133,7 @@ export default defineNuxtConfig({
   },
 
   pwa: {
+    includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png', 'favicon-16x16.png', 'favicon-32x32.png', 'favicon-96x96.png', 'favicon-192x192.png', 'favicon-512x512.png'],
     manifest: {
       name: '연권 ❤ 하얀 결혼식',
       short_name: '연권 ❤ 하얀',
@@ -140,6 +141,33 @@ export default defineNuxtConfig({
       theme_color: '#ffffff',
       background_color: '#ffffff',
       display: 'standalone',
+      icons: [
+        {
+          src: '/favicon-16x16.png',
+          sizes: '16x16',
+          type: 'image/png',
+        },
+        {
+          src: '/favicon-32x32.png',
+          sizes: '32x32',
+          type: 'image/png',
+        },
+        {
+          src: '/favicon-96x96.png',
+          sizes: '96x96',
+          type: 'image/png',
+        },
+        {
+          src: '/favicon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: '/favicon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
     },
   },
 })
