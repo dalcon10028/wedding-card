@@ -67,7 +67,7 @@ useSeoMeta({
 
     <section-invitation />
 
-    <section class="px-10 py-16 bg-[#f6f5f5]">
+    <section class="px-8 py-16 bg-[#f6f5f5]">
       <p class="font-serif text-2xl text-[#524548] tracking-widest leading-8">
         {{ format(wedding.date, 'yyyy.M.d') }}
       </p>

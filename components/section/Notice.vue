@@ -62,30 +62,35 @@ const onFormSubmit = (a: FormSubmitEvent) => {
   >
     <section class="flex flex-col gap-8 px-8">
       <Fieldset legend="식사안내">
-        <div class="px-5 py-5 mt-0">
-          <p>식사는 결혼식 및 사진 촬영이 끝난 후 웨딩홀 3층에서 뷔페식으로 진행됩니다.</p>
-          <p>&nbsp;</p>
-          <p>부족함 없이 즐기실 수 있도록</p>
-          <p>한식을 비롯해 중식, 양식, 일식 등 </p>
-          <p>다양한 메뉴가 준비되어 있습니다.</p>
+        <div class="px-4 py-5 mt-0">
+          <p class="break-keep">
+            식사는 결혼식 및 사진 촬영이 끝난 후 웨딩홀 3층에서 뷔페식으로 진행됩니다. <br><br>
+            부족함 없이 즐기실 수 있도록 <br>
+            한식을 비롯해 중식, 양식, 일식 등 <br>
+            다양한 메뉴가 준비되어 있습니다.
+          </p>
         </div>
       </Fieldset>
 
       <Fieldset legend="주차안내">
         <div class="px-5 py-5 mt-0">
-          <p>강변테크노마트 지하 주차장</p>
-          <p>2시간 무료주차가 가능합니다.</p>
-          <p>&nbsp;</p>
-          <p>입차 시 받은 주차권(1시간 제공)과 3층 안내 데스크에서 차량번호 등록 후 출차하시면 됩니다.</p>
+          <p class="break-keep">
+            강변테크노마트 지하 주차장 <br>
+            2시간 무료주차가 가능합니다. <br><br>
+
+            입차 시 받은 주차권(1시간 제공)과 3층 안내 데스크에서 차량번호 등록 후 출차하시면 됩니다.
+          </p>
         </div>
       </Fieldset>
 
       <Fieldset legend="참석 의사 전달">
         <div class="flex flex-col gap-6 p-5 mt-0">
           <div class="grow">
-            <p>축하의 마음으로 참석해주시는</p>
-            <p>모든 분들을 귀하게 모실 수 있도록</p>
-            <p>참석 의사를 전달 부탁드립니다.</p>
+            <p class="break-keep">
+              축하의 마음으로 참석해주시는
+              모든 분들을 귀하게 모실 수 있도록
+              참석 의사를 전달 부탁드립니다.
+            </p>
           </div>
           <Button
             label="참석 의사 전달하기"

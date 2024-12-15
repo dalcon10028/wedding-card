@@ -39,7 +39,7 @@ const onClick = (provider: NavigationProvider) => {
 <template>
   <Button
     as="a"
-    pt:root:class="bg-white border-[#eaeaea] text-black text-sm"
+    pt:root:class="bg-white border-[#eaeaea] text-black text-sm break-keep"
     variant="outlined"
     @click="onClick(provider)"
   >
