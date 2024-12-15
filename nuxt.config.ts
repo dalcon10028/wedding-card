@@ -3,7 +3,7 @@ import { defaultOptions } from 'primevue/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@vueuse/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxt/fonts'],
+  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@vueuse/nuxt', '@nuxt/eslint', '@nuxt/image', '@nuxt/fonts', '@vite-pwa/nuxt'],
   devtools: { enabled: true },
   css: ['@/assets/styles/tailwind.css', '@/assets/styles/base.css', 'primeicons/primeicons.css', 'vue3-toastify/dist/index.css'],
   runtimeConfig: {
@@ -102,9 +102,6 @@ export default defineNuxtConfig({
       { name: 'Gowun Dodum', provider: 'google', global: true },
       { name: 'Crimson Pro', provider: 'google', global: true },
       { name: 'Noto Sans Korean', provider: 'google', global: true },
-      // 'Gowun Dodum': [300, 400, 700],
-      // 'Crimson Pro': [200, 600, 700],
-      // 'Noto Sans Korean': [400],
     ],
   },
   image: {
@@ -135,4 +132,14 @@ export default defineNuxtConfig({
     },
   },
 
+  pwa: {
+    manifest: {
+      name: '연권 ❤ 하얀 결혼식',
+      short_name: '연권 ❤ 하얀',
+      lang: 'ko',
+      theme_color: '#ffffff',
+      background_color: '#ffffff',
+      display: 'standalone',
+    },
+  },
 })

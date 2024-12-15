@@ -17,11 +17,11 @@ const isBrideFirst = !!route.query.brideFirst
 const { public: { groom, bride, wedding, share } } = useRuntimeConfig()
 
 useSeoMeta({
-  title: `${isBrideFirst ? `${bride.name} & ${groom.name}` : `${groom.name} & ${bride.name}`} 결혼식에 초대합니다.`,
+  title: `${isBrideFirst ? `${bride.name} ❤ ${groom.name}` : `${groom.name} & ${bride.name}`} 결혼식에 초대합니다.`,
   description: `${format(wedding.date, 'yyyy년 M월 d일 EEEE a h시 mm분', { locale: ko })}\n${wedding.place}`,
   ogType: 'website',
   ogUrl: 'https://wedding.whymango.site',
-  ogTitle: `${isBrideFirst ? `${bride.name} & ${groom.name}` : `${groom.name} & ${bride.name}`} 결혼식에 초대합니다.`,
+  ogTitle: `${isBrideFirst ? `${bride.name} ❤ ${groom.name}` : `${groom.name} & ${bride.name}`} 결혼식에 초대합니다.`,
   ogDescription: `${format(wedding.date, 'yyyy년 M월 d일 EEEE a h시 mm분', { locale: ko })}\n${wedding.place}`,
   ogImage: img(share.thumbnail, { width: 526, height: 528 }),
 })
@@ -43,7 +43,7 @@ useSeoMeta({
         </p>
       </div>
       <div class="flex justify-center">
-        <div class="w-[412px] h-[567px] bg-transparent" />
+        <div class="w-[412px] h-[567px] bg-[#6b635b71]" />
         <!-- <NuxtImg
           src="/images/main.jpeg"
           alt="메인 이미지"

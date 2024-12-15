@@ -1,5 +1,8 @@
 <template>
-  <nuxt-layout>
-    <nuxt-page />
-  </nuxt-layout>
+  <div>
+    <vite-pwa-manifest />
+    <nuxt-layout>
+      <nuxt-page />
+    </nuxt-layout>
+  </div>
 </template>
