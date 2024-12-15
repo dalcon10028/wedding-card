@@ -4,9 +4,9 @@ export default {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['Gowun Dodum', 'system-ui', 'sans-serif'],
-      serif: ['Crimson Pro', 'monospace'],
-      account: ['Noto Sans Korean'],
+      sans: ['Gowun Dodum', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+      serif: ['Crimson Pro', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Serif KR', 'serif'],
+      account: ['Noto Sans Korean', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
     },
     extend: {},
   },
