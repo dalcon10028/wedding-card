@@ -2,6 +2,7 @@
 import { parseISO, intlFormat, format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 
+const { $pwa } = useNuxtApp()
 const route = useRoute()
 const img = useImage()
 useHead({
@@ -11,6 +12,8 @@ useHead({
     onselectstart: 'return false',
   },
 })
+
+console.log($pwa?.isPWAInstalled)
 
 const isBrideFirst = !!route.query.brideFirst
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vite-pwa-manifest />
+    <nuxt-pwa-manifest />
     <nuxt-layout>
       <nuxt-page />
     </nuxt-layout>

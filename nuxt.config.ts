@@ -137,6 +137,7 @@ export default defineNuxtConfig({
     manifest: {
       name: '연권 ❤ 하얀 결혼식',
       short_name: '연권 ❤ 하얀',
+      description: '연권 ❤ 하얀 결혼식',
       lang: 'ko',
       theme_color: '#ffffff',
       background_color: '#ffffff',
@@ -168,6 +169,17 @@ export default defineNuxtConfig({
           type: 'image/png',
         },
       ],
+      screenshots: [
+        {
+          src: '/screenshot1.jpg',
+          sizes: '1280x720',
+          type: 'image/jpg',
+        },
+      ],
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
     },
   },
 })
