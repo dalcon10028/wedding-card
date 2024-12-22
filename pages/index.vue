@@ -13,8 +13,6 @@ useHead({
   },
 })
 
-console.log($pwa?.isPWAInstalled)
-
 const isBrideFirst = !!route.query.brideFirst
 
 const { public: { groom, bride, wedding, share } } = useRuntimeConfig()
@@ -103,7 +101,7 @@ useSeoMeta({
 
     <!-- <section-gallery /> -->
 
-    <!-- <section-account /> -->
+    <section-account />
 
     <section-footer />
   </div>

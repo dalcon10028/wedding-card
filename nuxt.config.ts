@@ -21,26 +21,26 @@ export default defineNuxtConfig({
       groom: {
         name: '이연권',
         account: {
-          bank: '국민은행',
-          accountNumber: '123-456-789',
+          bank: '케이뱅크',
+          accountNumber: '100-157-676199',
           kakaoPay: 'https://link.kakaopay.com/_/-nlEAe1',
         },
-        phoneNumber: '010-1234-5678',
+        phoneNumber: '010-8566-7296',
         father: {
           name: '이해산',
-          phoneNumber: '010-1234-5678',
+          phoneNumber: '010-9256-7296',
           account: {
-            bank: '국민은행',
-            accountNumber: '123-456-789',
+            bank: '신한은행',
+            accountNumber: '608-02-213274',
           },
         },
         mother: {
           name: '이선영',
           account: {
-            bank: '국민은행',
-            accountNumber: '123-456-789',
+            bank: '카카오뱅크',
+            accountNumber: '3333-31-8245763',
           },
-          phoneNumber: '010-1234-5678',
+          phoneNumber: '010-9290-7296',
         },
       },
 
@@ -48,25 +48,25 @@ export default defineNuxtConfig({
         name: '유하얀',
         account: {
           bank: '국민은행',
-          accountNumber: '123-456-789',
+          accountNumber: '774602-04-075682',
           kakaoPay: 'https://link.kakaopay.com/_/WWDVYVM',
         },
-        phoneNumber: '010-1234-5678',
+        phoneNumber: '010-3397-5854',
         father: {
           name: '유종관',
           account: {
             bank: '국민은행',
-            accountNumber: '123-456-789',
+            accountNumber: '496525-96-110092',
           },
-          phoneNumber: '010-1234-5678',
+          phoneNumber: '010-2235-5854',
         },
         mother: {
           name: '지명옥',
           account: {
-            bank: '국민은행',
-            accountNumber: '123-456-789',
+            bank: '우리은행',
+            accountNumber: '1002-709-991512',
           },
-          phoneNumber: '010-1234-5678',
+          phoneNumber: '010-8959-5854',
         },
       },
 
