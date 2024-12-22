@@ -1,6 +1,10 @@
 export type Person = {
   name: string
-  accountNumber: string
+  account: {
+    bank: string
+    accountNumber: string
+    kakaoPay?: string
+  }
   phoneNumber: string
 }
 
